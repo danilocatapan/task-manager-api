@@ -9,9 +9,8 @@ const sendWelcomeEmail = (email, name) => {
     subject: 'Thanks for joining in!',
     text: `Welcome to the app, ${name}. Let me know how you get along with the app.`
   }).catch((error) => {
-    console.log({
-      'error': error
-    })
+    console.log(`email send error: ${e.message}`);
+    return `email send error: ${e.message}`;
   })
 }
 
@@ -22,9 +21,8 @@ const sendCancelationEmail = (email, name) => {
     subject: 'Sorry to see you go!',
     text: `Goodbye, ${name}. I hope to see you back sometime soon.`
   }).catch((error) => {
-    console.log({
-      'error': error
-    })
+    console.log(`email send error: ${e.message}`);
+    return `email send error: ${e.message}`;
   })
 }
 
